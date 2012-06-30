@@ -164,6 +164,7 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 CONFIG_ACS := true
+CONFIG_IEEE80211AC := true
 
 # Inherit the proprietary files
 include vendor/xiaomi/apollo/BoardConfigVendor.mk
