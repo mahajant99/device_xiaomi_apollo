@@ -244,6 +244,7 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     ApolloFrameworks \
     ApolloSystemUI \
+    AOSPAApolloFrameworks \
     FrameworksResTarget \
     WifiResTarget
 

@@ -80,6 +80,7 @@ on post-fs-data
     chmod 0664 /sys/class/leds/flashlight/brightness
 
 on boot
+    chown system system /sys/touchpanel/double_tap
     chown system system /sys/class/touch/touch_dev/palm_sensor
     chown system system /sys/class/touch/touch_dev/partial_diff_data
     chown system system /sys/class/thermal/thermal_message/sconfig
