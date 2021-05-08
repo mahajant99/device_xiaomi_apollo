@@ -234,6 +234,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.options=::v2 \
     ro.hardware.keystore_desede=true
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.xiaomi_kona
+
 # Media (VPP)
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.media.video.frc=false \
