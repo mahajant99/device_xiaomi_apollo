@@ -458,6 +458,11 @@ vendor/lib64/libOmxQcelp13Dec.so
 vendor/lib64/libOmxVpp.so
 vendor/lib64/libOmxWmaDec.so
 
+# PD - LA.UM.9.12.r1-10800-SMxx50.0
+vendor/bin/pd-mapper
+vendor/lib64/libpdmapper.so
+vendor/lib64/libpdnotifier.so
+
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
@@ -541,7 +546,6 @@ vendor/bin/adpl
 vendor/bin/ks
 vendor/bin/mdm_helper
 vendor/bin/netmgrd
-vendor/bin/pd-mapper
 vendor/bin/port-bridge
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
@@ -576,8 +580,6 @@ vendor/lib64/libnetmgr_common.so
 vendor/lib64/libnetmgr_nr_fusion.so
 vendor/lib64/libnetmgr_rmnet_ext.so
 vendor/lib64/libnlnetmgr.so
-vendor/lib64/libpdmapper.so
-vendor/lib64/libpdnotifier.so
 vendor/lib64/libqcbor.so
 vendor/lib64/libqcrilFramework.so
 vendor/lib64/libqcrildatactl.so
