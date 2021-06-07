@@ -553,7 +553,6 @@ vendor/bin/qrtr-ns
 vendor/bin/qti
 vendor/bin/rmt_storage
 vendor/bin/ssgtzd
-vendor/bin/tftp_server
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/etc/init/dataadpl.rc
@@ -564,7 +563,6 @@ vendor/etc/init/port-bridge.rc
 vendor/etc/init/qcrild.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
-vendor/etc/init/vendor.qti.tftp.rc
 vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
@@ -654,6 +652,10 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Soter service (Tencent) - from lmi-user 11 RKQ1.200826.002 V12.5.1.0.RJKMIXM release-keys
 -vendor/app/SoterService/SoterService.apk|939423f0016034cf8676f64d384aafde308f779b
+
+# TFTP - LA.UM.9.12.r1-10800-SMxx50.0
+vendor/bin/tftp_server
+vendor/etc/init/vendor.qti.tftp.rc
 
 # Thermal
 vendor/bin/mi_thermald
