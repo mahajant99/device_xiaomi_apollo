@@ -156,6 +156,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+PRODUCT_PACKAGES += \
+    CutoutRingServiceApollo
+
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
