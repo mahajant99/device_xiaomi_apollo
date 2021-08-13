@@ -386,6 +386,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     init.qcom.power.rc \
+    init.performance_level.rc \
     init.qcom.rc \
     init.target.rc \
     fstab.qcom \
