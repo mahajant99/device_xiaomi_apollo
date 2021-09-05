@@ -34,9 +34,11 @@ vendor/lib64/libbt-hidlclient.so
 vendor/lib64/libbtnv.so
 
 # Bluetooth-A2DP
+vendor/lib/btaudio_offload_if.so
 vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib/btaudio_offload_if.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
@@ -53,6 +55,7 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
 vendor/lib/libcdsprpc.so
+vendor/lib/libfastcrc.so
 vendor/lib/libfastcvdsp_stub.so
 -vendor/lib/libfastcvopt.so
 vendor/lib/libmdsprpc.so
@@ -136,8 +139,9 @@ vendor/lib64/vendor.qti.latency@2.0.so
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
-# Connection Security - LA.UM.9.12.r1-10800-SMxx50.0
+# Connection Security - LA.UM.9.12.r1-11500-SMxx50.0
 vendor/bin/ssgqmigd
 vendor/bin/ssgtzd
 vendor/etc/init/ssgtzd.rc
@@ -146,23 +150,19 @@ vendor/lib64/libminksocket.so
 # Consumer IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.kona.so
 
-# Display (DRM)
-vendor/lib64/libsdedrm.so
-
-# Display (HDR)
-vendor/lib64/libhdr_tm.so
-
-# Display (SDM)
-vendor/lib64/libdisp-aba.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libqseed3.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-diag.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtinyxml2_1.so
+# Display-Hardware - from LA.UM.9.12.r1-12000-SMxx50.0
+vendor/lib64/libdisp-aba.so|902839da31464e54bd4756747db2dd7ad867484f
+vendor/lib64/libdisplayqos.so|949be5d7caeb0c3c566beee79f872d4b4e45c280
+vendor/lib64/libdisplayskuutils.so|3846f08d2d23088f830cc89d6727a1ca2a89bde9
+vendor/lib64/libhdr_tm.so|4be3cfff1ef40cbc6ad329b79c60881263aa6723
+vendor/lib64/libqseed3.so|c9fb729cf48278d0c87d27c0af17ae3a8ccb1bf7
+vendor/lib64/libsdedrm.so|7ca95a25bfccb45cd8776ab49b278a14a3faf740
+vendor/lib64/libsdm-color.so|29cbc16f6fa573d21f48e2be2ff0d51de3357378
+vendor/lib64/libsdm-colormgr-algo.so|1fb7f3cb11557bbf677afb5d6eda0e4e9fd3ac58
+vendor/lib64/libsdm-diag.so|a237a8e628026fef25ca9eaa3ebcbbf56489be9a
+vendor/lib64/libsdm-disp-vndapis.so|ba6a9d52f0635d5ad5e440b403a9af2cd0fbac2a
+vendor/lib64/libsdmextension.so|b6b24dd7b4a3d1de51da000e59e39af8efc785cc
+vendor/lib64/libtinyxml2_1.so|fb0a2b16e5cfd28515268edc5c2345190d1ef4e5
 
 # DPM
 vendor/bin/dpmQmiMgr
@@ -224,10 +224,10 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 vendor/bin/feature_enabler_client
 vendor/etc/init/feature_enabler_client.rc
 
-# Gatekeeper - from LA.UM.9.12.r1-11500-SMxx50.0
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|785f511a9fbac6d2dd08376cca4d590f71e9afc9
+# Gatekeeper
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # Graphics (Adreno)
 -vendor/app/com.qualcomm.qti.gpudrivers.kona.api30/com.qualcomm.qti.gpudrivers.kona.api30.apk;PRESIGNED
@@ -241,63 +241,60 @@ vendor/firmware/a650_zap.b02
 vendor/firmware/a650_zap.elf
 vendor/firmware/a650_zap.mdt
 
-# GNSS
-vendor/bin/hw/android.hardware.gnss@2.1-service-qti
+# GPS - LA.UM.9.12.r1-11500-SMxx50.0
+vendor/bin/garden_app
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
-vendor/bin/slim_daemon
+vendor/bin/mlid
+vendor/bin/slim_daemon|46cc6ab22c7111f472fc9c9ec4d410f8c9f99cdc
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
-vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc
--vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
 -vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
+vendor/etc/apdr.conf
 vendor/etc/cacert_location.pem
+vendor/etc/izat.conf
+vendor/etc/lowi.conf
+vendor/etc/sap.conf
+vendor/etc/sec_config
 vendor/etc/xtra_root_cert.pem
-vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so
+vendor/etc/xtwifi.conf
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
 vendor/lib64/libaoa.so
-vendor/lib64/libbatching.so
-vendor/lib64/libcacertclient.so
+vendor/lib64/libasn1cper.so
+vendor/lib64/libasn1crt.so
+vendor/lib64/libasn1crtx.so
+vendor/lib64/libcdfw.so
+vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libdataitems.so
+vendor/lib64/libgarden.so
+vendor/lib64/libgarden_haltests_e2e.so
 vendor/lib64/libgdtap.so
-vendor/lib64/libgeofencing.so
-vendor/lib64/libgnss.so
 vendor/lib64/libgnsspps.so
-vendor/lib64/libgps.utils.so
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
-vendor/lib64/libjnihelper.so
 vendor/lib64/liblbs_core.so
 vendor/lib64/libloc_api_v02.so
-vendor/lib64/libloc_core.so
 vendor/lib64/libloc_socket.so
-vendor/lib64/liblocation_api.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
 vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libqcc_file_agent.so
-vendor/lib64/libqdma_file_agent.so
 vendor/lib64/libslimclient.so
+vendor/lib64/libsynergy_loc_api.so
 vendor/lib64/libxtadapter.so
+vendor/lib64/libxtwifi_server_protocol.so
+vendor/lib64/libxtwifi_server_protocol_uri_v3.so
 vendor/lib64/vendor.qti.gnss@1.0.so
 vendor/lib64/vendor.qti.gnss@1.1.so
 vendor/lib64/vendor.qti.gnss@1.2.so
 vendor/lib64/vendor.qti.gnss@2.0.so
 vendor/lib64/vendor.qti.gnss@2.1.so
 vendor/lib64/vendor.qti.gnss@3.0.so
-vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
-
-# GNSS configs
-vendor/etc/apdr.conf
-vendor/etc/flp.conf
-vendor/etc/gps.conf
-vendor/etc/izat.conf
-vendor/etc/lowi.conf
-vendor/etc/sap.conf
-vendor/etc/xtwifi.conf
+vendor/lib64/vendor.qti.gnss@4.0-service.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
 # IMS
 vendor/bin/ims_rtp_daemon
@@ -362,14 +359,14 @@ vendor/firmware/ipa_uc.b02
 vendor/firmware/ipa_uc.elf
 vendor/firmware/ipa_uc.mdt
 
-# Keymaster - from LA.UM.9.12.r1-10800-SMxx50.0
-vendor/bin/hw/android.hardware.keymaster@4.1-service-qti|ba4ef74d97d62ef9339347c57a0ec71bec267fb6
-vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc|f6907552961ba772c1ad5b493913a60d65abedb4
-vendor/lib64/libkeymasterdeviceutils.so|3589f0f1a53662b93b58f6117927d2504fe4cba5
-vendor/lib64/libkeymasterprovision.so|c3ef91872b1f831244e2125392bd037206b3e210
-vendor/lib64/libkeymasterutils.so|6febbcfd1835dbf4ffe6222040de86b4a34857dc
-vendor/lib64/libqtikeymaster4.so|3bc0833a03911e2f5f2d36fd754d6e02efba0df3
-vendor/lib64/libspcom.so|2c94581e2645034cfa25b4752eff450c65e1b9d5
+# Keymaster
+vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
+vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
+vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterprovision.so
+vendor/lib64/libkeymasterutils.so
+vendor/lib64/libqtikeymaster4.so
+vendor/lib64/libspcom.so
 
 # Listen
 vendor/lib/hw/sound_trigger.primary.kona.so
@@ -385,7 +382,7 @@ vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
 
-# MDM - LA.UM.9.12.r1-10800-SMxx50.0
+# MDM - LA.UM.9.12.r1-11500-SMxx50.0
 vendor/bin/ks
 vendor/bin/mdm_helper
 vendor/bin/mdm_helper_proxy
@@ -396,6 +393,7 @@ vendor/etc/system_properties.xml
 
 # Mink-Lowi Interface daemon
 vendor/bin/mlid
+vendor/lib64/libminksocket.so
 
 # Mlipay
 vendor/bin/mlipayd@1.1
@@ -423,10 +421,10 @@ vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
-# NFC Firmware - from LA.UM.9.12.r1-10800-SMxx50.0.
-vendor/etc/libnfc-mtp-SN100.conf|a9570f1f620dcad9b9d5fe24eb3255c3f13c6099
-vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf|bfe54a5b7d327c11a0b160b651f5c3e7dd927ef6
-vendor/lib/libsn100u_fw.so|2bc1887b71b4557b75e26465f6917525bfd43e4a
+# NFC
+vendor/etc/libnfc-mtp-SN100.conf
+vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf
+vendor/lib/libsn100u_fw.so
 
 # NVRAM
 vendor/bin/nv_mac
@@ -469,7 +467,7 @@ vendor/lib64/libOmxQcelp13Dec.so
 vendor/lib64/libOmxVpp.so
 vendor/lib64/libOmxWmaDec.so
 
-# PD - LA.UM.9.12.r1-10800-SMxx50.0
+# PD - LA.UM.9.12.r1-11500-SMxx50.0
 vendor/bin/pd-mapper
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
@@ -481,6 +479,7 @@ vendor/lib64/libperipheral_client.so
 
 # Power-off alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
+system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
@@ -495,7 +494,7 @@ vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 
-# QDMA - LA.UM.9.12.r1-10800-SMxx50.0
+# QDMA - LA.UM.9.12.r1-11500-SMxx50.0
 -vendor/app/QCC-TR-UI/QCC-TR-UI.apk
 vendor/bin/qcc-trd
 vendor/etc/init/init.qdmastats.rc
@@ -508,7 +507,6 @@ vendor/bin/irsc_util
 vendor/bin/qmipriod
 vendor/etc/init/qmipriod.rc
 vendor/etc/seccomp_policy/qti-systemd.policy
-vendor/etc/sec_config
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
@@ -542,14 +540,14 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 
-# QSPM HAL - LA.UM.9.12.r1-10800-SMxx50.0
+# QSPM HAL - LA.UM.9.12.r1-11500-SMxx50.0
 vendor/bin/vendor.qti.qspmhal@1.0-service
 vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
 vendor/etc/seccomp_policy/qspm.policy
 vendor/lib64/vendor.qti.qspmhal@1.0.so
 vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
 
-# RemoteFS - LA.UM.9.12.r1-10800-SMxx50.0
+# RemoteFS - LA.UM.9.12.r1-11500-SMxx50.0
 vendor/bin/rmt_storage
 vendor/etc/init/vendor.qti.rmt_storage.rc
 
@@ -663,7 +661,7 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 # Soter service (Tencent) - from lmi-user 11 RKQ1.200826.002 V12.5.1.0.RJKMIXM release-keys
 -vendor/app/SoterService/SoterService.apk|939423f0016034cf8676f64d384aafde308f779b
 
-# TFTP - LA.UM.9.12.r1-10800-SMxx50.0
+# TFTP - LA.UM.9.12.r1-11500-SMxx50.0
 vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
