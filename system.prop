@@ -71,6 +71,9 @@ persist.vendor.data.mode=concurrent
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
+# VSync
+debug.cpurend.vsync=false
+
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
 
