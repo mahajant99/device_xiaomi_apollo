@@ -27,4 +27,4 @@ TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/apollon/apollon-vendor.mk)
+$(call inherit-product, vendor/xiaomi/apollo/apollo-vendor.mk)
