@@ -109,6 +109,7 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/apollo
 TARGET_KERNEL_CLANG_VERSION := r428724
 TARGET_KERNEL_ADDITIONAL_FLAGS += LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Partitions
 ifeq ($(PRODUCT_VIRTUAL_AB_OTA),true)
