@@ -96,7 +96,7 @@
         </service>
 
         <activity
-            android:name=".speaker.ClearSpeakerActivity" 
+            android:name=".speaker.ClearSpeakerActivity"
             android:label="@string/clear_speaker_title"
             android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
