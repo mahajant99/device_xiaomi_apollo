@@ -97,5 +97,5 @@ void vendor_load_properties()
     }
 
     property_override("ro.build.fingerprint", "google/raven/raven:12/SQ1D.211205.016.A1/7957957:user/release-keys");
-    property_override("ro.build.description", "apollo-user 11 RKQ1.200826.002 V12.5.1.0.RJDMIXM release-keys");
+    property_override("ro.build.description", "apollo_global-user 11 RKQ1.200826.002 V12.5.5.0.RJDMIXM release-keys");
 }
