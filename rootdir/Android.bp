@@ -68,9 +68,6 @@ xiaomi_kona_rootdir_prebuilt_etc {
             a: {
                 src: "etc/fstab.qcom",
             },
-            vab: {
-                src: "etc/fstab_AB.qcom",
-            },
             conditions_default: {
                 src: "etc/fstab.qcom",
             },
@@ -80,13 +77,6 @@ xiaomi_kona_rootdir_prebuilt_etc {
 }
 
 // Init configuration files
-prebuilt_etc {
-    name: "init.nfc.rc",
-    src: "etc/init.nfc.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
 prebuilt_etc {
     name: "init.qcom.power.rc",
     src: "etc/init.qcom.power.rc",

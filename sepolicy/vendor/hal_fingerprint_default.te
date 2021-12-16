@@ -30,3 +30,7 @@ set_prop(hal_fingerprint_default, vendor_fp_prop)
 
 allow hal_fingerprint_default vendor_sysfs_spss:dir { search };
 allow hal_fingerprint_default vendor_sysfs_spss:file { open read };
+
+typeattribute hal_fingerprint_default data_between_core_and_vendor_violators;
+allow hal_fingerprint_default goodix_fingerprint_data_file:dir create_dir_perms;
+allow hal_fingerprint_default goodix_fingerprint_data_file:file create_file_perms;

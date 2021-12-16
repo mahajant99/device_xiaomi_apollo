@@ -12,11 +12,6 @@
 /mnt/vendor/persist/camera(/.*)?                                        u:object_r:camera_persist_file:s0
 /vendor/bin/remosaic_daemon                                             u:object_r:remosaic_daemon_exec:s0
 
-# Camera motor
-/dev/drv8846_dev                                                        u:object_r:motor_device:s0
-/dev/ti-drv8846                                                         u:object_r:motor_device:s0
-/vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1.0-service              u:object_r:hal_motor_default_exec:s0
-
 # Charger
 /vendor/bin/batterysecret                                               u:object_r:batterysecret_exec:s0
 
@@ -35,13 +30,13 @@
 /dev/mius(.*)?                                                          u:object_r:ultrasound_device:s0
 
 # Fingerprint
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2.1-service\.xiaomi_kona                      u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2.1-service\.apollo           u:object_r:hal_fingerprint_default_exec:s0
 
 # Fingerprint - devices
 /dev/goodix_fp                                                          u:object_r:fingerprint_device:s0
 
 # Fingerprint - data
-/data/gf_data(/.*)?                                                     u:object_r:fingerprint_data_file:s0
+/data/gf_data(/.*)?                                                     u:object_r:goodix_fingerprint_data_file:s0
 /data/vendor/goodix(/.*)?                                               u:object_r:fingerprint_data_file:s0
 /data/vendor/fpc(/.*)?                                                  u:object_r:fingerprint_data_file:s0
 /data/vendor/fpdump(/.*)?                                               u:object_r:fingerprint_data_file:s0

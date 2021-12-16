@@ -155,11 +155,6 @@ on boot
     chmod 0664 /sys/class/drm/card0-DSI-1/doze_brightness
     chown system system /sys/class/drm/card0-DSI-1/disp_count
     chmod 0664 /sys/class/drm/card0-DSI-1/disp_count
-    #camera motor
-    chmod 0777 /sys/class/drv8846/ti-drv8846/debug
-    chown system system /sys/class/backlight/panel0-backlight/brightness_clone
-    chmod 0664 /sys/class/power_supply/battery/dc_thermal_levels
-    chown system system /sys/class/thermal/thermal_message/sconfig
     # Load all wlan drivers
     exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_qca6390 qca_cld3_qca6490
 
