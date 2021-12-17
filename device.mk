@@ -173,10 +173,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MatchmakerPrebuilt
 
-# Device-specific settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Component overrides
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
