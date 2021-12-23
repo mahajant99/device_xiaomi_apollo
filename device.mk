@@ -203,6 +203,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Init scripts
 PRODUCT_PACKAGES += \
+    init.mi.btmac.sh \
     init.mi.usb.sh \
     init.qti.dcvs.sh
 
