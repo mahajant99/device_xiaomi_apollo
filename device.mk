@@ -11,16 +11,19 @@ TARGET_BOARD_PLATFORM := kona
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+PRODUCT_PACKAGES += \
+    AOSPAApolloFrameworks \
+    AOSPAApolloSettings \
+    AOSPAApolloSystemUI \
+    ApolloFrameworks \
+    ApolloSystemUI \
+    WifiResTarget
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -277,6 +280,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     media-legacy \
     nq-nfc \
+    overlay \
     perf \
     telephony \
     usb \
