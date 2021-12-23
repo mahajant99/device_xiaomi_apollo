@@ -246,6 +246,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # Overlays
 PRODUCT_PACKAGES += \
     ApolloFrameworks \
+    ApolloSettings \
     ApolloSystemUI \
     AOSPAApolloFrameworks \
     FrameworksResTarget \
