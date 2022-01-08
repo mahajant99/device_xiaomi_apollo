@@ -178,6 +178,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MatchmakerPrebuilt
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sf.color_mode=0 \
