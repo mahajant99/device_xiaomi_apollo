@@ -713,4 +713,7 @@
 
     <!-- Whether device has fingerprint on power button -->
     <bool name="config_powerButtonFingerprint">true</bool>
+
+    <!-- If this is true, the screen will fade off. -->
+    <bool name="config_animateScreenLights">false</bool>
 </resources>
