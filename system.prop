@@ -50,11 +50,18 @@ vendor.iop.enable_uxe=0
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
-# RIL
-persist.sys.fflag.override.settings_provider_model=false
-
 # Netflix
 ro.netflix.bsp_rev=Q8250-19134-1
+
+# Netmgr
+persist.vendor.data.iwlan.enable=true
+persist.vendor.data.mode=concurrent
+
+# Octavi
+ro.octavi.maintainer=Tushar Mahajan (mahajant99)
+ro.octavi.display.pid=1655569
+ro.octavi.hw.cam=108MP/64MP,13MP,5MP:20MP 
+ro.octavi.hw.cpu=Snapdragon 865 5G (7 nm+)
 
 # Perf
 ro.vendor.qti.core_ctl_max_cpu=4
@@ -63,9 +70,8 @@ ro.vendor.qti.core_ctl_min_cpu=2
 # Radio
 ro.telephony.default_network=33,22
 
-# Netmgr
-persist.vendor.data.iwlan.enable=true
-persist.vendor.data.mode=concurrent
+# RIL
+persist.sys.fflag.override.settings_provider_model=false
 
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
@@ -75,6 +81,3 @@ debug.cpurend.vsync=false
 
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
-
-# Octavi
-ro.octavi.maintainer=mahajant99
