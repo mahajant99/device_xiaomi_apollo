@@ -371,6 +371,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc \
     init.target.rc \
+    init.touch.rc \
     fstab.qcom \
     fstab.qcom_ramdisk \
     ueventd.qcom.rc
@@ -405,7 +406,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.apollon
+    vendor.lineage.touch@1.0-service.xiaomi
 
 # USB
 PRODUCT_PACKAGES += \

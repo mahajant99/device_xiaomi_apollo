@@ -91,6 +91,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.touch.rc",
+    src: "etc/init.touch.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "ueventd.qcom.rc",
     filename: "ueventd.rc",
     src: "etc/ueventd.qcom.rc",
