@@ -95,6 +95,6 @@ void vendor_load_properties()
         }
     }
 
-    property_override("ro.build.fingerprint", "google/raven/raven:12/SP2A.220505.002/8353555:user/release-keys");
-    property_override("ro.build.description", "apollo_eea-user 12 RKQ1.211001.001 V13.0.2.0.SJDEUXM release-keys");
+    property_override("ro.build.fingerprint", "Redmi/apollo_eea/apollo:12/RKQ1.211001.001/V13.0.6.0.SJDEUXM:user/release-keys");
+    property_override("ro.build.description", "apollo_eea-user 12 RKQ1.211001.001 V13.0.6.0.SJDEUXM release-keys");
 }
