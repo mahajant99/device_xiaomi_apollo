@@ -308,6 +308,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml
 
+# Subsystem silent restart
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.ssr.restart_level=ALL_ENABLE
+
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
     vndservicemanager
