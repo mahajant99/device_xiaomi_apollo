@@ -250,6 +250,7 @@ PRODUCT_PACKAGES += \
     ApolloSettings \
     ApolloSystemUI \
     AOSPAApolloFrameworks \
+    AOSPAApolloSystemUI \
     FrameworksResTarget \
     WifiResTarget
 
