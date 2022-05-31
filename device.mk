@@ -6,21 +6,7 @@
 
 DEVICE_PATH := device/xiaomi/apollon
 
-PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_SHIPPING_API_LEVEL := 29
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-# Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay \
-    $(DEVICE_PATH)/overlay-lineage
-
-PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(DEVICE_PATH)/overlay/packages/apps/CarrierConfig
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -139,10 +125,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor
 
-# Camera Cutout
-PRODUCT_PACKAGES += \
-    CutoutRingServiceApollo
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
@@ -150,16 +132,20 @@ TARGET_SCREEN_WIDTH := 1080
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64 \
+    android.hardware.camera.provider@2.4-service_64
+
+PRODUCT_PACKAGES += \
     libMegviiFacepp-0.5.2 \
     libcamera2ndk_vendor \
     libgui_vendor \
+    libstdc++.vendor \
     libmegface \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
+# Camera Cutout
 PRODUCT_PACKAGES += \
-    libstdc++.vendor
+    CutoutRingServiceApollo
 
 # Configstore
 PRODUCT_PACKAGES += \
@@ -170,20 +156,33 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
-# Device-specific settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Component overrides
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
 # Display
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.display.composer-service
+
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
+    vendor.qti.hardware.display.allocator-service
+
+PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
+    memtrack.kona
+
+PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
     libdisplayconfig.qti.vendor \
     libdisplayconfig.system.qti \
@@ -193,13 +192,10 @@ PRODUCT_PACKAGES += \
     libsdmutils \
     libtinyxml \
     libvulkan \
-    memtrack.kona \
     vendor.display.config@1.5 \
     vendor.display.config@1.11.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
-    vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
@@ -321,6 +317,18 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(DEVICE_PATH)/overlay \
+    $(DEVICE_PATH)/overlay-lineage
+
+PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(DEVICE_PATH)/overlay/packages/apps/CarrierConfig
+
+# Partitions
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Perf
 PRODUCT_PACKAGES += \
     libqti-perfd-client
@@ -382,7 +390,9 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service \
+    android.hardware.sensors@1.0-service
+
+PRODUCT_PACKAGES += \
     libsensorndkbridge
 
 # Soong namespaces
