@@ -1,2 +1,0 @@
-on boot
-    chown system system /sys/devices/virtual/touch/touch_dev/bump_sample_rate

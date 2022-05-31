@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Fingerprint
 on init
     chmod 0664 /dev/fortsense_fp
     chown system system /dev/fortsense_fp
@@ -43,3 +44,7 @@ on post-fs-data
 
     mkdir /mnt/vendor/persist/fpc 0770 system system
     mkdir /mnt/vendor/persist/goodix 0770 system system
+
+# Touch
+on boot
+    chown system system /sys/devices/virtual/touch/touch_dev/bump_sample_rate
