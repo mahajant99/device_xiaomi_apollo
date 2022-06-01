@@ -1,0 +1,4 @@
+service vendor.qti.vibrator.apollon /vendor/bin/hw/vendor.qti.hardware.vibrator.service.apollon
+    class hal
+    user system
+    group system input
