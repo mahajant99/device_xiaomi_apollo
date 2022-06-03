@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Adreno
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.kona.api30
 
 # APEX
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
