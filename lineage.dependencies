@@ -6,15 +6,15 @@
     "revision"   : "lineage-19.1"
  },
  {
-    "repository" : "we-r-friends-collab/vendor_xiaomi_apollon",
+    "repository" : "crdroidandroid/android_vendor_xiaomi_apollon",
     "target_path": "vendor/xiaomi/apollon",
     "remote"     : "github",
     "revision"   : "12.1"
  },
  {
-    "repository" : "we-r-friends-collab/kernel_xiaomi_sm8250",
+    "repository" : "crdroidandroid/android_kernel_xiaomi_sm8250",
     "target_path": "kernel/xiaomi/sm8250",
     "remote"     : "github",
-    "revision"   : "12.1"
+    "revision"   : "12.1-apollon"
  }
 ]
