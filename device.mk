@@ -211,10 +211,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
     android.hardware.health@2.1-service
 
-# Incremental FS
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.incremental.enable=1
-
 # Init scripts
 PRODUCT_PACKAGES += \
     init.mi.btmac.sh \
@@ -277,9 +273,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Platform
 TARGET_BOARD_PLATFORM := kona
 
-# Project ID Quota
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := all
 
@@ -316,6 +309,12 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=QTI \
     ro.soc.model=SM8250
+
+# Storage
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.incremental.enable=yes
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Telephony
 PRODUCT_COPY_FILES += \
