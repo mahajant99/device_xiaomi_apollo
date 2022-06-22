@@ -193,11 +193,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Init scripts
 PRODUCT_PACKAGES += \
+    init.mi.usb.sh \
     init.qti.dcvs.sh
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.target.rc
+    init.apollo.rc \
+    init.target.rc \
+    ueventd.apollo.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom

@@ -19,9 +19,29 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.apollo.rc",
+    src: "etc/init.apollo.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.target.rc",
     src: "etc/init.target.rc",
     sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.apollo.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd.apollo.rc",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.mi.usb.sh",
+    src: "bin/init.mi.usb.sh",
     vendor: true,
 }
 
