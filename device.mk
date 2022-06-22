@@ -236,6 +236,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # Overlays
 PRODUCT_PACKAGES += \
     ApolloFrameworks \
+    ApolloSystemUI \
     FrameworksResTarget \
     WifiResTarget
 
