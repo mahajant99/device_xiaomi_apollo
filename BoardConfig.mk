@@ -70,6 +70,10 @@ DEVICE_MANIFEST_FILE += \
 DEVICE_MATRIX_FILE += \
     device/qcom/common/compatibility_matrix.xml
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_apollo
+TARGET_RECOVERY_DEVICE_MODULES := libinit_apollo
+
 # Kernel
 BOARD_KERNEL_CMDLINE := \
     androidboot.console=ttyMSM0 \
