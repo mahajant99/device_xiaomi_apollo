@@ -368,7 +368,9 @@ vendor/lib64/libvideofilter_only.so|a79f90fd9b3105744790412b72f314f804707fbe
 vendor/lib64/libvidhance.so|769fe96e1e282e22abb658190755fa1acbacf2ec
 vendor/lib64/libxmi_hdr_checker.so|c2b5a4df52e98a29aa36a56d08d40b630cbcbda0
 vendor/lib64/libxmi_high_dynamic_range.so|66e1be862164de52caa54565ee9d65091522cb16
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|f0ee934ce0ceedaf3c429be7c644311e8343a6a8
+
+# Camera (postproc) - from LA.UM.9.14.r1-18400.02-LAHAINA.QSSI12.0
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|afeca01f1fc2619ddf1aada01d42735ab9efa682
 
 # Camera (arcsoft) - MIUI
 vendor/lib64/libarcsoft_beautyshot.so|1faae34b96337876f94503a1048f4ce408219dec
