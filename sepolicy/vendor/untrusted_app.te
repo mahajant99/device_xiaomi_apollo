@@ -1,0 +1,4 @@
+allow untrusted_app sysfs:dir { read };
+allow untrusted_app vendor_sysfs_battery_supply:dir { search };
+allow untrusted_app vendor_sysfs_kgsl:file { read };
+allow untrusted_app zygote:unix_stream_socket { getopt };
