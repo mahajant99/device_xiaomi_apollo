@@ -304,6 +304,7 @@ vendor/lib64/com.qti.feature2.swmf.so|56bc37d88549b35e45e7b4ce576fc52ff81ab21a
 vendor/lib64/com.xiaomi.plugin.mibokeh.so|621f99edc3bf1b97281323d7ceac7a9cccb66c43
 vendor/lib64/libHalSuperSensorServer.so|24fcde442ecb34e5c34455b3c680aafd03eeca3b
 vendor/lib64/libMIAIHDRhvx_interface.so|8f3b1ec1c38b16b457d0dfc8bfab705c2a8ca258
+vendor/lib64/libMegviiFacepp-0.5.2.so|a439145c3700d62446af21fe385775e6d5cb1a9a
 vendor/lib64/libSNPE.so|5939b1b6f72f181149069d4b78c4e9f380084c08
 vendor/lib64/libSuperSensor.so|07f1dac912055faadb73d0eb673d0be1ec694428
 vendor/lib64/libSuperSensorCPU.so|fb92765cdbf20e822086f54ec7abcf631c2440ae
@@ -328,6 +329,7 @@ vendor/lib64/libdualcam_video_optical_zoom.so|646a9075456fef857208520ad007b61fa2
 vendor/lib64/libfocus.so|c482e083f1d5e40cf3702d8dd49ccd4f6b5473fa
 vendor/lib64/libft2vendor.so|fd87e8dbbb193d263d60bd352813b686633cba65
 vendor/lib64/libipebpsstriping.so|0894e54002e18443481f0b90e87c32fcc8783c38
+vendor/lib64/libmegface.so|8f67d986f23a110e48a2c6c57024ac3dee4993aa
 vendor/lib64/libmialgo_ie_capture.so|44ffc0ac917140fde385abefee5eeb8f8a88fc34
 vendor/lib64/libmialgo_ie_preview.so|689f9cba4d8948a2a3da5c0b0a547eb63f4179dc
 vendor/lib64/libmialgo_image_colourkeeping.so|f217702c1be45bf08a1040ee17123bf5782413a7
@@ -532,6 +534,7 @@ vendor/etc/camera/eyelineblush.cng|f85c3388ab3112ad8963e004c47b131e5d567cca
 vendor/etc/camera/goturn_search_dsp.dlc|c8c64b61c2e8ff17550e724c90921a341ba6da17
 vendor/etc/camera/goturn_target_dsp.dlc|4bb24e7a5a3163def4a7816e0e5ad3de5506df6b
 vendor/etc/camera/hdrd_ui9_params.config|6fad18b88f0284a3a3b3933dbd5c6e451878f4fb
+vendor/etc/camera/megviifacepp_0_5_2_model|a2b8751f04d94f0634453c40426e66b0a1283da1
 vendor/etc/camera/mibokeh_855_opencl.bin|bbe0d3f40f6c9ade895f93f567be87b0ef1641b9
 vendor/etc/camera/mibokeh_855_parameter.bin|c88ff5bcc45fa27dcb7bd53c988e9eb9335574e6
 vendor/etc/camera/model.dat|bdd55d665f48489420dab6baa320ca20d44ed7a8
@@ -753,7 +756,7 @@ vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service|73fc89b7cb632d
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc|b7ebf3f899906f3d8bb4db8d957984a1773edd20
 vendor/etc/init/init_qfp_daemon.rc|512054af94f4f85dd9ec0e3820292f8bc67c2214
 vendor/etc/permissions/com.fingerprints.extension.xml|de711d8827e1d321b22b60fd75a204e8928f9c6d
-vendor/etc/permissions/qti_fingerprint_interface.xml|226663934ad3c3c439629e7c10e9cab361fcce77
+vendor/etc/permissions/qti_fingerprint_interface.xml|d3efc0abac8c064b3f8ccd783875b3d532972212
 -vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml|49e82d6a43981e254d224dcc93b3ff27e0fb8407
 vendor/firmware/168_fingerprintRecord_RTP.bin|70bd3d9f0328a8119ab48ae283d88791e544d8f6
 vendor/firmware/fingerprint_record_rtp.bin|70bd3d9f0328a8119ab48ae283d88791e544d8f6
