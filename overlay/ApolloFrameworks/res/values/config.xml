@@ -37,6 +37,13 @@
          -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout">M -939,0 H -1080 V 90 H -939 V 0 Z@right</string>
 
+    <!-- The default refresh rate. Apollo manages this using the peak refresh rate setting, so set
+         this value to 0 so it has no effect. -->
+    <integer name="config_defaultRefreshRate">0</integer>
+
+    <!-- The default peak refresh rate. -->
+    <integer name="config_defaultPeakRefreshRate">144</integer>
+
     <!-- Array of desired screen brightness in nits corresponding to the lux values
       in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
       config_screenBrightnessMaximumNits, the display brightness is defined as the measured
