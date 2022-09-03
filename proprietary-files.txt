@@ -550,7 +550,6 @@ vendor/etc/qdcm_calib_data_xiaomi_37_02_0a_video_mode_dsc_dsi_panel.xml
 
 # Display postprocessing - from apollo
 vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/ppd
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/lib64/libdisp-aba.so
 vendor/lib64/vendor.display.color@1.0.so
