@@ -856,7 +856,7 @@ vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
 
-# Media
+# Media - from apollo
 system_ext/lib/libmmosal.so
 system_ext/lib/libmmparser_lite.so
 system_ext/lib64/libmmosal.so
@@ -914,7 +914,7 @@ vendor/lib64/se_nq_extn_client.so
 # NVRAM
 vendor/bin/nv_mac
 
-# OMX
+# OMX - from apollo
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so
