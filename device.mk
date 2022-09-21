@@ -142,7 +142,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.use_layer_ext=1 \
     vendor.display.defer_fps_frame_count=2
 
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true
     ro.surface_flinger.set_display_power_timer_ms=1000
     ro.surface_flinger.set_idle_timer_ms=80
