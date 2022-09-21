@@ -95,6 +95,6 @@ void vendor_load_properties()
         }
     }
 
-    property_override("ro.build.fingerprint", "Redmi/apollo_global/apollo:12/RKQ1.211001.001/V13.0.5.0.SJDMIXM:user/release-keys");
-    property_override("ro.build.description", "apollo_global-user 12 RKQ1.211001.001 V13.0.5.0.SJDMIXM release-keys");
+    property_override("ro.build.fingerprint", "Redmi/apollo_global/apollo:12/RKQ1.211001.001/V13.0.6.0.SJDMIXM:user/release-keys");
+    property_override("ro.build.description", "apollo_global-user 12 RKQ1.211001.001 V13.0.6.0.SJDMIXM release-keys");
 }
