@@ -27,6 +27,7 @@ import android.view.SurfaceControl;
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.PocketService;
 import org.lineageos.settings.thermal.ThermalUtils;
+import org.lineageos.settings.refreshrate.RefreshUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -50,5 +51,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         SurfaceControl.overrideHdrTypes(displayToken, new int[]{
                 HdrCapabilities.HDR_TYPE_DOLBY_VISION, HdrCapabilities.HDR_TYPE_HDR10,
                 HdrCapabilities.HDR_TYPE_HLG, HdrCapabilities.HDR_TYPE_HDR10_PLUS});
+
+        // Per app refresh rate
+        RefreshUtils.startService(context);
+
     }
 }
