@@ -16,5 +16,11 @@
     "target_path": "kernel/xiaomi/sm8250",
     "remote"     : "github",
     "revision"   : "12.1-apollon"
+ },
+ {
+    "repository" : "the-muppets/proprietary_vendor_firmware",
+    "target_path": "vendor/firmware",
+    "remote"     : "gitlab",
+    "revision"   : "lineage-19.1"
  }
 ]
