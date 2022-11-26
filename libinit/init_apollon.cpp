@@ -75,6 +75,8 @@ void set_device_props(const string brand, const string marketname,
         set_ro_build_prop(source, "product", device, false);
         set_ro_build_prop(source, "model", model, true);
     }
+
+    property_override("vendor.usb.product_string", marketname, true);
 }
 
 void vendor_load_properties()
