@@ -234,6 +234,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    ApolloCarrierConfig \
     ApolloFrameworks \
     ApolloSettings \
     ApolloSystemUI \
