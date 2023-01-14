@@ -24,6 +24,7 @@ import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -55,7 +56,6 @@ public class RefreshSettingsFragment extends PreferenceFragment
     private ApplicationsState mApplicationsState;
     private ApplicationsState.Session mSession;
     private ActivityFilter mActivityFilter;
-    private Map<String, ApplicationsState.AppEntry> mEntryMap = new HashMap<String, ApplicationsState.AppEntry>();
 
     private RefreshUtils mRefreshUtils;
     private RecyclerView mAppsRecyclerView;
@@ -96,7 +96,6 @@ public class RefreshSettingsFragment extends PreferenceFragment
     @Override
     public void onResume() {
         super.onResume();
-        getActivity().setTitle(getResources().getString(R.string.refresh_title));
         rebuild();
     }
 
@@ -178,10 +177,6 @@ public class RefreshSettingsFragment extends PreferenceFragment
         }
 
         mAllPackagesAdapter.setEntries(entries, sections, positions);
-        mEntryMap.clear();
-        for (ApplicationsState.AppEntry e : entries) {
-            mEntryMap.put(e.info.packageName, e);
-        }
     }
 
     private void rebuild() {
@@ -314,6 +309,7 @@ public class RefreshSettingsFragment extends PreferenceFragment
             holder.mode.setSelection(packageState, false);
             holder.mode.setTag(entry);
             holder.stateIcon.setImageResource(getStateDrawable(packageState));
+            holder.stateIcon.setOnClickListener(v -> holder.mode.performClick());
         }
 
         private void setEntries(List<ApplicationsState.AppEntry> entries,
@@ -414,5 +410,14 @@ public class RefreshSettingsFragment extends PreferenceFragment
             }
             return show;
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            getActivity().onBackPressed();
+            return true;
+        }
+        return false;
     }
 }
