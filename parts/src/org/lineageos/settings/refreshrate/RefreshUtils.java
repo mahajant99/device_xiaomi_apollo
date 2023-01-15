@@ -91,7 +91,7 @@ public final class RefreshUtils {
         String value = mSharedPrefs.getString(REFRESH_CONTROL, null);
 
         if (value == null || value.isEmpty()) {
-            value = REFRESH_STANDARD + ":" + REFRESH_EXTREME;
+            value = REFRESH_STANDARD + ":" + REFRESH_HIGH + ":" + REFRESH_EXTREME;
             writeValue(value);
         }
         return value;
@@ -115,7 +115,7 @@ public final class RefreshUtils {
                 break;
         }
 
-        finalString = modes[0] + ":" + modes[1];
+        finalString = modes[0] + ":" + modes[1] + ":" + modes[2];
 
         writeValue(finalString);
     }
