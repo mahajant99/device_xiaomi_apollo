@@ -1,5 +1,6 @@
 # Unpinned blobs from munch-user 13 RKQ1.211001.001 V14.0.1.0.TLMMIXM release-keys
 # apollo: apollo_global-user 12 RKQ1.211001.001 V13.0.8.0.SJDMIXM release-keys
+# instantnoodlep: IN2025_11.F.62
 
 # ADSP
 vendor/bin/adsprpcd
@@ -763,7 +764,6 @@ system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
--system_ext/priv-app/ims/ims.apk
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -826,6 +826,9 @@ vendor/firmware/ipa_uc.b01
 vendor/firmware/ipa_uc.b02
 vendor/firmware/ipa_uc.elf
 vendor/firmware/ipa_uc.mdt
+
+# IMS - from instantnoodlep
+-system_ext/priv-app/ims/ims.apk|f0d834acbc77e7830459e0246f5073e1b9ba8657
 
 # IRQ balance
 vendor/bin/msm_irqbalance
