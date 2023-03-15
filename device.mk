@@ -102,9 +102,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 # Charging
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.charger.enable_suspend=1
-
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.cp.fcc_main_ua=400000 \
     persist.vendor.cp.taper_term_mv=7000 \
