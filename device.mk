@@ -289,9 +289,8 @@ PRODUCT_PACKAGES += \
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-# SOC Properties
+# SoC Property
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.soc.manufacturer=QTI \
     ro.soc.model=SM8250
 
 # Storage
