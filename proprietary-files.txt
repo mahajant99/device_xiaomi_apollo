@@ -1,6 +1,6 @@
 # Unpinned blobs from munch-user 13 RKQ1.211001.001 V14.0.1.0.TLMMIXM release-keys
 # apollo: apollo_global-user 12 RKQ1.211001.001 V13.0.8.0.SJDMIXM release-keys
-# instantnoodlep: IN2025_11.F.62
+# renoir: 22.5.11
 
 # ADSP
 vendor/bin/adsprpcd
@@ -827,7 +827,7 @@ vendor/firmware/ipa_uc.b02
 vendor/firmware/ipa_uc.elf
 vendor/firmware/ipa_uc.mdt
 
-# IMS - from instantnoodlep
+# IMS - from renoir
 -system_ext/priv-app/ims/ims.apk|f0d834acbc77e7830459e0246f5073e1b9ba8657
 
 # IRQ balance
