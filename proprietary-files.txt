@@ -1,5 +1,5 @@
 # Unpinned blobs from munch-user 13 RKQ1.211001.001 V14.0.1.0.TLMMIXM release-keys
-# apollo: apollo_global-user 12 RKQ1.211001.001 V13.0.8.0.SJDMIXM release-keys
+# apollo: apollo_global-user 12 RKQ1.211001.001 V14.0.1.0.SJDMIXM release-keys
 # renoir: 22.5.11
 
 # ADSP
@@ -297,7 +297,7 @@ vendor/lib64/camera/components/com.mi.node.rearvideo.so
 vendor/lib64/camera/components/com.mi.node.skinbeautifier.so
 vendor/lib64/camera/components/com.mi.node.superlowlightraw.so
 vendor/lib64/camera/components/com.mi.node.videobokeh.so
-vendor/lib64/camera/components/com.mi.node.watermark.so|98c4ad92a3ceef803a247226e4d2ed97c3bb0dfe|8c10d25f6f18a3d6f5b9a15df9465f45d9d60adf
+vendor/lib64/camera/components/com.mi.node.watermark.so|c990eb9b96dfed5af69d8b93abbb4f5c60c4b2f3|3d4d5f9068c9b61d619ea7fa87f62e3ed37ed070
 vendor/lib64/camera/components/com.qti.camx.chiiqutils.so
 vendor/lib64/camera/components/com.qti.eisv2.so
 vendor/lib64/camera/components/com.qti.eisv3.so
