@@ -78,6 +78,10 @@ on post-fs-data
     chmod 0664 /sys/class/leds/led:switch_2/brightness
     chmod 0664 /sys/class/leds/flashlight/brightness
 
+on early-init
+    # Start audio adsp rpc daemon at early init stage
+    start vendor.audioadsprpcd_audiopd
+
 on boot
     chown system system /sys/touchpanel/double_tap
     chown system system /sys/class/touch/touch_dev/palm_sensor
