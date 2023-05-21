@@ -45,6 +45,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.sos=true \
     ro.vendor.audio.soundfx.type=mi \
     ro.vendor.audio.soundfx.usb=true \
+    ro.vendor.audio.support.sound.id=true \
     ro.vendor.audio.surround.support=true \
     ro.vendor.audio.us.proximity=true \
     ro.vendor.audio.vocal.support=true \
@@ -64,6 +65,7 @@ PRODUCT_ODM_PROPERTIES += \
     vendor.audio.feature.dynamic_ecns.enable=false \
     vendor.audio.feature.spkr_prot.enable=false \
     vendor.audio.hal.output.suspend.supported=false \
+    vendor.audio.offload.multiple.enabled=true \
     vendor.audio.offload.track.enable=false
 
 PRODUCT_COPY_FILES += \
