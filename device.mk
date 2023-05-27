@@ -329,8 +329,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 30
-
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
     android.hardware.gatekeeper@1.0.vendor \
