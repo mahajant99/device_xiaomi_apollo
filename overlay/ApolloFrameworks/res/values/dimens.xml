@@ -22,9 +22,7 @@
     <dimen name="rounded_corner_radius_top">90px</dimen>
 
     <!-- Height of the status bar -->
+    <dimen name="status_bar_height_default">28dp</dimen>
     <dimen name="status_bar_height_landscape">28dp</dimen>
     <dimen name="status_bar_height_portrait">117px</dimen>
-
-    <!-- Height of area above QQS where battery/time go (equal to status bar) -->
-    <dimen name="quick_qs_offset_height">40dp</dimen>
 </resources>
