@@ -553,10 +553,7 @@ vendor/lib64/libmmcamera_faceproc2.so|3a09ebc6d06a140327c7ca7d506e6196bf0ffe60
 # Charger - MIUI
 vendor/bin/batterysecret|7fc17a38e688aa68b416ebfb230f5cc95bdbf901
 vendor/bin/hvdcp_opti|d3dae2d3c64df366b82d11deb100af4d8813131f
-vendor/bin/init.qti.chg_policy.sh|9a96b05abdfe149eb8a7e20a791284e84b5fffe0
-vendor/etc/charger_fstab.qti|8464c139d93f05e86ff9c9d31b3e8617b8d9476e
 vendor/etc/init/init.batterysecret.rc|9abbe6fd82a0bd5b4499bfe141a5645e76e57606
-vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc|29b23be4f604282abf715f86aec9697175a9aaad
 
 # CNE
 -vendor/app/CACertService/CACertService.apk
