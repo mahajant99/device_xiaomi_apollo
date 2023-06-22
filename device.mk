@@ -271,7 +271,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     perf \
     telephony \
     usb \
-    vibrator \
     wfd \
     wlan
 
@@ -335,6 +334,9 @@ $(call inherit-product, vendor/xiaomi/apollo/apollo-vendor.mk)
 # Verified Boot
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
+
+# Vibrator
+$(call inherit-product, hardware/xiaomi/aidl/vibrator/vibrator-vendor-product.mk)
 
 # VNDK
 PRODUCT_PACKAGES += \
