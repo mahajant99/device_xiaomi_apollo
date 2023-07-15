@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/apollon
+DEVICE_PATH := device/xiaomi/apollo
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_DUP_RULES := true
@@ -61,8 +61,8 @@ TARGET_USES_ION := true
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_apollon
-TARGET_RECOVERY_DEVICE_MODULES := init_apollon
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_apollo
+TARGET_RECOVERY_DEVICE_MODULES := init_apollo
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
@@ -196,4 +196,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
-include vendor/xiaomi/apollon/BoardConfigVendor.mk
+include vendor/xiaomi/apollo/BoardConfigVendor.mk
