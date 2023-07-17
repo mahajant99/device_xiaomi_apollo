@@ -154,9 +154,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     vendor.display.idle_time=1100
     debug.sf.frame_rate_multiple_threshold=144
 
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.sf.use_latest_hwc_vsync_period=0
-
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/display/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
