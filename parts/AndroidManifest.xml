@@ -3,8 +3,7 @@
     package="org.lineageos.settings"
     android:versionCode="3"
     android:versionName="3.0"
-    android:sharedUserId="android.uid.system"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:sharedUserId="android.uid.system">
 
     <uses-sdk
         android:minSdkVersion="24"
@@ -12,22 +11,12 @@
 
     <uses-permission android:name="android.permission.DEVICE_POWER" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
-    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER" />
 
     <application
         android:allowBackup="true"
         android:label="@string/device_settings_app_name"
         android:persistent="true">
 
-        <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="${applicationId}.androidx-startup"
-            tools:replace="android:authorities"/>
-            
         <receiver android:name=".BootCompletedReceiver">
             <intent-filter android:priority="1000">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
